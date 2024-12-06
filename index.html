@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ansed tots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #282828;
+            padding: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        #intro h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        #intro p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        #intro button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #intro button:hover {
+            background-color: #666;
+        }
+
+        .letter-section {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+            background-color: #1a1a1a;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 60vh;
+            border: 1px solid #444;
+            border-radius: 10px;
+        }
+
+        .letter-section h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .letter-section p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .letter-section .emoji {
+            margin-top: 20px;
+            font-size: 3rem;
+            animation: bounce 1.5s infinite;
+        }
+
+        .nav-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            padding: 10px 15px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #666;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #intro h1, .letter-section h1 {
+                font-size: 1.5rem;
+            }
+
+            #intro p, .letter-section p {
+                font-size: 0.9rem;
+            }
+
+            #intro button, .nav-buttons button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Intro Section -->
+    <div id="intro">
+        <h1>Hai...</h1>
+        <p>Welcome to my freedom wall. Here, I'll pour out my thoughts and feelings when something bothers me.</p>
+        <button onclick="showSection('letter1')">Continue</button>
+    </div>
+
+    <!-- Letter 1 -->
+    <div id="letter1" class="letter-section">
+        <h1>11/29/24</h1>
+        <p>Hai bebi,<br><br>
+            I hope you don’t mind me writing all of this down—it’s easier for me to sort through my feelings this way. You know naman that I’m not the most expressive person when it comes to words, but I didn’t want to break our promise: if something’s bothering us, we’ll tell each other. So… eto na. <br><br>
+            Pauwi na tayo kanina, and we were holding hands. I was happy kasi for me, moments like that feel so special. But then nung nasa gate na tayo, you let go of my hand. At first, I thought baka may nakita kang kakilala, kasi usually sinasabi mo naman, like “hala tita ko” or something. Pero this time, you didn’t say anything. It left me wondering, and I couldn’t stop thinking about it.<br>
+            The thought crossed my mind na baka you were worried about what someone might think, especially if it was an old classmate or someone who knew you from before. I understand naman na those situations can be tricky, and I’m not trying to judge or assume anything. Pero I can’t help but feel a bit unsure and sad about it, kasi holding your hand means a lot to me. It’s like saying, “This is us, and I’m proud.”<br>
+            I want you to know that I’m not upset with you, baby.. I just wanted to share how I felt, kasi I didn’t want this small moment to grow into something bigger in my mind. I’m saying this because I trust you, and I know we can talk about things like this openly.
+    
+    I love you so much, and I know how much you love me too. I just want us to keep being honest with each other, even about the small things, para we understand each other better. Thank you for always being patient with me, for listening, and for loving me in all the ways that you do. 🌙</p>
+        <div class="emoji">😭</div>
+        <div class="nav-buttons">
+            <button onclick="showSection('intro')">Back to Intro</button>
+            <button onclick="showSection('letter2')">Next Letter</button>
+        </div>
+    </div>
+
+    <!-- Letter 2 -->
+    <div id="letter2" class="letter-section">
+        <h1>12/6/24</h1>
+        <p>Hi bb,
+
+            I’ve been thinking about what happened earlier, and I just wanted to share how I felt. Alam mo naman siguro na I overthink a lot, lalo na sa mga bagay tungkol sa’yo, and kanina parang I couldn’t stop my thoughts. <br><br>
+            
+            So ayun, kaninang umaga, I noticed na busy ka talaga with your notes. I totally get that kaya I didn’t try to disturb you. Sabi ko sa sarili ko, “Mamaya na lang siguro, tapos din ‘yan, may time din kami later.” Pero nung dumating na yung time na wala nang klase, I got excited kasi feeling ko that was the moment we could finally hang out or talk, pero nung lumapit ako sa’yo, parang iba.
+            
+            I sat beside you kasi wala ka nang ginagawa, and I thought we could chill or something. Pero parang ang layo mo, and I didn’t know why. Sabi ko, baka pagod ka lang or wala lang talaga sa mood. Pero honestly, it kinda hurt kasi parang hindi mo ko pinapansin. <br><br>
+            
+            Then nung sinabi ni Pao na magpractice na yung mga may partner, nilapitan kita and sabi ko, “Practice na tayo.” Pero wala kang sagot. Tapos nung inulit ko, sabi mo, “Wala akong gana,” na parang ang cold ng tono mo. I tried not to take it personally, pero naisip ko, “Galit ba siya sakin?” Kaya tinanong kita, and sabi mo, “Hindi.” Pero... your actions said otherwise.
+            
+            Diba sinabi mo na rin sakin before na kung sakaling maramdaman mo na parang ayaw kong kausapin ka, magbibigay ka ng space hanggang sa ma-feel mo na gusto ko na ulit makipag-usap? Kaya kanina, naisip ko yun and ginawa ko rin. Pero I think it just made the problem bigger. Maybe may silent tampuhan na naganap, and I’m really sorry if behaving that way made things worse instead of solving it. <br><br>
+            
+            Hindi ko alam kung ako lang ba nag-ooverthink or kung pagod ka lang talaga, pero I couldn’t help but feel na baka may nagawa ako na di mo nagustuhan. Honestly, nawalan na rin ako ng gana kasi I felt like you didn’t want to be around me at that moment.
+            
+            Tapos nung tumayo ka, parang ang bigat ng tingin mo sakin. You looked mad, and it really got to me. Then you said, “Na?” like I was supposed to stand up too, pero parang wala na rin akong energy. I don’t know, bb, pero it felt like I was the one making things worse. Kaya I gave you some space, pero deep down, ang bigat lang ng pakiramdam ko. <br><br>
+            
+            I just wanna say na kung may nagawa man akong mali, I’m really sorry. I don’t want you to feel bad because of me. Kung pagod ka or wala ka lang sa mood kanina, I totally get it. Pero sana you can tell me next time, kasi masakit lang sa akin yung parang hindi ko alam kung galit ka or ano ba talaga.
+            
+            Alam ko sensitive ako minsan, lalo na sa maliliit na bagay, pero I care about you so much, bb. Kaya when things feel off, ang hirap hindi maapektuhan.
+            
+            Sana okay tayo. I just wanted to get this off my chest. I love you always, kahit na minsan ang sensitive ko.
+        </p>
+        <div class="emoji">🥺</div>
+        <div class="nav-buttons">
+            <button onclick="showSection('letter1')">Previous Letter</button>
+            <button onclick="showSection('intro')">Back to Intro</button>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.letter-section, #intro');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
